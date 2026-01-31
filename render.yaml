@@ -4,12 +4,11 @@ services:
     env: node
     plan: free
     buildCommand: npm install
-    startCommand: npm start
-    rootDir: .
+    startCommand: node server.js
     envVars:
       - key: PORT
         value: 10000
-      - key: JWT_SECRET
-        sync: false
       - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
         sync: false
